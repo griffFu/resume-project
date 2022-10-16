@@ -14,16 +14,12 @@
     "react-to-print": "^2.14.7",
     "web-vitals": "^2.1.4"
   },
-  
   "watch": {
-      "build": [
-        "src"
-      ],
-      "extensions": "js,jsx"
-    },
-
-  
-  
+    "build": [
+      "src"
+    ],
+    "extensions": "js,jsx"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -48,7 +44,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.8",
+    "postcss": "^7.0.39",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   }
-
-  
 }

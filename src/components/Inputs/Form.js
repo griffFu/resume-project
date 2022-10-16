@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
-function LastTest(){
-    return (
-        <div>
-            LastTest.js
-        </div>
-    );
+
+function Form(){
+    const [title,setTitle] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
+
+    return(
+    <div>
+        <form onSubmit={handleSubmit}>
+            <label>Blog title</label>
+            <input 
+                type="text"
+                required
+                value = {title}
+                onChange={(e)=> setTitle(e.target.value)}
+             />
+            <button>submit</button>
+        </form>
+    </div>
+    )
 };
 
-export default LastTest;
+export default Form;
