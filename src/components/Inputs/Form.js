@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 
 
+
 function Form(){
     const [title,setTitle] = useState('');
+    const [viewForm,setViewForm] = useState(true);
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        setViewForm(viewForm => !viewForm)
     }
 
     return(
@@ -20,6 +23,7 @@ function Form(){
              />
             <button>submit</button>
         </form>
+        
     </div>
     )
 };

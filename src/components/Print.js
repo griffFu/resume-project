@@ -10,7 +10,6 @@ export const Print = () => {
   
     return (
       <div>
-        
         <ComponentToPrint ref={componentRef} />
         <button onClick={handlePrint}>Print this out!</button>
       </div>
