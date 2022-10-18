@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 
 
-
-function Form(){
-    const [title,setTitle] = useState('');
-    const [viewForm,setViewForm] = useState(true);
-
+function Form({pTitle, onClick, setNewVal}){
+    
+   
     const handleSubmit = (e) => {
         e.preventDefault()
-        setViewForm(viewForm => !viewForm)
-    }
+      } 
 
     return(
     <div>
@@ -18,10 +15,10 @@ function Form(){
             <input 
                 type="text"
                 required
-                value = {title}
-                onChange={(e)=> setTitle(e.target.value)}
+                value = {pTitle}
+                onChange={setNewVal}
              />
-            <button>submit</button>
+            <button onClick={onClick}>submit</button>
         </form>
         
     </div>
