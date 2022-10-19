@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-function Form({pTitle, onClick, setNewVal}){
+function Form({info, onClick, setNewVal}){
     
    
     const handleSubmit = (e) => {
@@ -17,10 +17,18 @@ function Form({pTitle, onClick, setNewVal}){
             <input 
                 type="text"
                 required
-                value = {pTitle}
+                name="firstName"
+                value = {info.firstName}
                 onChange={setNewVal}
              />
-            <button onClick={onClick}>submit</button>
+            <input 
+                type="text"
+                required
+                name="lastName"
+                value = {info.lastName}
+                onChange={setNewVal}
+             />
+            <button onClick={onClick} className="bg-blue-700 p-1">submit</button>
         </form>
         
     </div>

@@ -7,11 +7,17 @@ import Output from "./output";
 function FormControl() {
  
   const [viewForm,setViewForm] = useState(true);
-  const [title,setTitle] = useState('');
+  const [title,setTitle] = useState({
+    firstName : "",
+    lastName : " "
+  });
 
   const newTitle = (e) => {
-    setTitle(e.target.value)
-  
+    const name = e.target.name;
+    const value = e.target.value;
+    setTitle((prev) => {
+      return {...prev, [name]:value}
+    })
   }
   function onButtonSubmit(){
       setViewForm(!viewForm)
@@ -21,8 +27,8 @@ function FormControl() {
   return (
 		<div>
       <div className="bg-orange-200 flex justify-center">
-        {viewForm && <Form pTitle = {title} onClick={onButtonSubmit} setNewVal= {newTitle}/>}
-        {!viewForm && <Output onClick={onButtonSubmit} oTitle = {title}/>}
+        {viewForm && <Form info={title} onClick={onButtonSubmit} setNewVal= {newTitle}/>}
+        {!viewForm && <Output onClick={onButtonSubmit} info = {title}/>}
       </div>
       
 		</div>
