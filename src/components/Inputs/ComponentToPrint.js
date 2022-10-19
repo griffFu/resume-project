@@ -1,12 +1,14 @@
 import React from "react";
-import Form from "./Inputs/Form";
-import FormControl from "./Inputs/FormControl";
+import Form from "./Form";
+import FormControl from "./FormControl";
 
 
 const ComponentToPrint = React.forwardRef((props, ref) => {
     return (
         <div ref={ref}>
-            <FormControl />
+            <div className="bg-gray-300">
+                <FormControl />
+            </div>
         </div>
     );
   });

@@ -9,7 +9,7 @@ export const Print = () => {
     });
   
     return (
-      <div>
+      <div className='bg-gray-400'>
         <ComponentToPrint ref={componentRef} />
         <button onClick={handlePrint}>Print this out!</button>
       </div>

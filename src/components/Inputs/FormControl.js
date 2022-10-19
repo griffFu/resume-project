@@ -20,10 +20,11 @@ function FormControl() {
   
   return (
 		<div>
-		  <h1>Hello World!</h1>
-      {viewForm && <Form pTitle = {title} onClick={onButtonSubmit} setNewVal= {newTitle}/>}
-      {!viewForm && <Output onClick={onButtonSubmit} oTitle = {title}/>}
-      {console.log(title)}
+      <div className="bg-orange-200 flex justify-center">
+        {viewForm && <Form pTitle = {title} onClick={onButtonSubmit} setNewVal= {newTitle}/>}
+        {!viewForm && <Output onClick={onButtonSubmit} oTitle = {title}/>}
+      </div>
+      
 		</div>
   );
 }

@@ -9,9 +9,11 @@ function Form({pTitle, onClick, setNewVal}){
       } 
 
     return(
-    <div>
-        <form onSubmit={handleSubmit}>
-            <label>Blog title</label>
+    <div className="flex bg-red-700">
+        <form className="p-8" onSubmit={handleSubmit}>
+            <div className="p">
+                <label>Full Name</label>
+            </div>
             <input 
                 type="text"
                 required
