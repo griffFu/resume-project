@@ -6,7 +6,8 @@ import FormControl from "./FormControl";
 const ComponentToPrint = React.forwardRef((props, ref) => {
     return (
         <div ref={ref}>
-            <div className="bg-gray-300">
+            <div className="flex  flex-col items-start bg-blue-500" >
+                <div>Identification</div>
                 <FormControl />
             </div>
         </div>

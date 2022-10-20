@@ -11,16 +11,19 @@ function Form({info, onClick, setNewVal}){
     return(
     <div className="flex bg-red-700">
         <form className="p-8" onSubmit={handleSubmit}>
-            <div className="p">
+            <div className="pb-2">
                 <label>Full Name</label>
             </div>
-            <input 
+            <input className=""
                 type="text"
                 required
                 name="firstName"
                 value = {info.firstName}
                 onChange={setNewVal}
              />
+            <div className="pb-2 pt-6">
+                <label>Current Title</label>
+            </div>
             <input 
                 type="text"
                 required

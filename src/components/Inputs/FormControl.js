@@ -25,13 +25,13 @@ function FormControl() {
  
   
   return (
-		<div>
-      <div className="bg-orange-200 flex justify-center">
+		<>
+      <div className="flex justify-center">
         {viewForm && <Form info={title} onClick={onButtonSubmit} setNewVal= {newTitle}/>}
         {!viewForm && <Output onClick={onButtonSubmit} info = {title}/>}
       </div>
       
-		</div>
+		</>
   );
 }
 

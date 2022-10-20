@@ -9,10 +9,10 @@ export const Print = () => {
     });
   
     return (
-      <div className='bg-gray-400'>
+      <>
         <ComponentToPrint ref={componentRef} />
         <button onClick={handlePrint}>Print this out!</button>
-      </div>
+      </>
     );
   };
 
